@@ -40,7 +40,7 @@ class Twitter_Bootstrap_Form_Decorator_Addon extends Zend_Form_Decorator_Abstrac
         // Prepare the prepend
         if (null !== $prepend) {
             $placement .= 'input-prepend ';
-            $prependAddOnClass = 'add-on';
+            $prependAddOnClass = 'input-group-addon';
 
             $this->_prepareAddon($prepend, $prependAddOnClass);
         }
@@ -48,7 +48,7 @@ class Twitter_Bootstrap_Form_Decorator_Addon extends Zend_Form_Decorator_Abstrac
         // Prepare the append
         if (null !== $append) {
             $placement .= 'input-append ';
-            $appendAddOnClass = 'add-on';
+            $appendAddOnClass = 'input-group-addon';
 
             $this->_prepareAddon($append, $appendAddOnClass);
         }
@@ -70,9 +70,9 @@ class Twitter_Bootstrap_Form_Decorator_Addon extends Zend_Form_Decorator_Abstrac
      */
     protected function _prepareAddon (&$addon)
     {
-        $addonClass = 'add-on';
+        $addonClass = 'input-group-addon';
 
-        // Convert into a Zend_Config object if we recieved an array
+        // Convert into a Zend_Config object if we received an array
         if (is_array($addon)) {
             $addon = new Zend_Config($addon, true);
         }

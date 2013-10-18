@@ -55,6 +55,8 @@ class Twitter_Bootstrap_Form_Element_Submit extends Zend_Form_Element_Submit
         if (isset($options['buttonType']) && in_array( $options['buttonType'], $this->buttons )) {
             $classes[] = 'btn-' . $options['buttonType'];
             unset($options['buttonType']);
+        } else {
+            $classes[] = 'btn-default';
         }
 
         if (isset($options['disabled'])) {
