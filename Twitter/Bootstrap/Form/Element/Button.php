@@ -46,13 +46,8 @@ class Twitter_Bootstrap_Form_Element_Button extends Twitter_Bootstrap_Form_Eleme
             // Disable automatic label escaping
             $options['escape'] = false;
             
-            $this->_icon = 'icon-' . $options['icon'];
-            
-            if (isset($options['whiteIcon']) && true === $options['whiteIcon']) {
-                $this->_icon .= ' icon-white';
-                unset($options['whiteIcon']);
-            }
-            
+            $this->_icon = 'glyphicon glyphicon-' . $options['icon'];
+
             if (isset($options['iconPosition'])) {
                 if (strcmp($options['iconPosition'], self::ICON_POSITION_RIGHT) === 0) {
                     $this->_iconPosition = self::ICON_POSITION_RIGHT;
@@ -73,7 +68,7 @@ class Twitter_Bootstrap_Form_Element_Button extends Twitter_Bootstrap_Form_Eleme
      */
     private function _renderIcon ()
     {
-        return !empty($this->_icon) ? '<i class="' . $this->_icon . '"></i>' : '';
+        return !empty($this->_icon) ? '<span class="' . $this->_icon . '"></span>' : '';
     }
 
     /**
