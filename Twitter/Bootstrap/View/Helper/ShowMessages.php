@@ -22,7 +22,7 @@ class Twitter_Bootstrap_View_Helper_ShowMessages extends Zend_View_Helper_Abstra
 	 * Type of alert messages
 	 * @var array
 	 */
-	protected $types = array('info', 'success', 'error' );
+	protected $types = array('info', 'success', 'warning', 'error' );
 
 	/**
 	 *

@@ -18,7 +18,7 @@
  */
 class Twitter_Bootstrap_Form_Horizontal extends Twitter_Bootstrap_Form
 {
-    public function __construct($options = null)
+    public function __construct($options = null, $fieldWidth = 'col-md-4', $labelWidth = 'col-md-3')
     {
         $this->_initializePrefixes();
         
@@ -30,8 +30,8 @@ class Twitter_Bootstrap_Form_Horizontal extends Twitter_Bootstrap_Form
             array('Addon'),
             array('ElementErrors'),
             array('Description', array('tag' => 'p', 'class' => 'help-block')),
-            array('HtmlTag', array('tag' => 'div', 'class' => 'controls')),
-            array('Label', array('class' => 'control-label')),
+            array('HorizontalWrapper', array('width' => $fieldWidth)),
+            array('Label', array('class' => "control-label {$labelWidth}")),
             array('Wrapper')
         ));
         
